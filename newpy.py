@@ -89,7 +89,4 @@ class newprograms:
         li = text.split()       # Split text into words
         for word in li:
             print("".join(word[::-1])) # slicing reverses string
-
-#x=newprograms().character_occurence("sanapala")
-#x=newprograms().extract_digits_from_string()
 newprograms().reverse_only_wordsofthe_string()
