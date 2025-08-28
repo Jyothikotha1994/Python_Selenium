@@ -89,4 +89,5 @@ class newprograms:
         li = text.split()       # Split text into words
         for word in li:
             print("".join(word[::-1])) # slicing reverses string
+            print(li)
 newprograms().reverse_only_wordsofthe_string()
