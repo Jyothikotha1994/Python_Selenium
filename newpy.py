@@ -6,13 +6,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from unicodedata import digit
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class newprograms:
     def launch_driver(self):
         options = Options()
 
-        # driver = webdriver.Chrome(ChromeDriverManager().install())
+        driver = webdriver.Chrome(ChromeDriverManager().install())
 
         driver = webdriver.Chrome(options=options)
         driver.get("https://www.google.com")
@@ -82,7 +83,13 @@ class newprograms:
         extractedvalues = re.findall(r"\d+", extractstring)
         print(extractedvalues)
 
+    def reverse_only_wordsofthe_string(self):
+        text="Hi, How are you doing?"
+        print(text + " → reverse only words")
+        li = text.split()       # Split text into words
+        for word in li:
+            print("".join(word[::-1])) # slicing reverses string
 
 #x=newprograms().character_occurence("sanapala")
 #x=newprograms().extract_digits_from_string()
-newprograms().launch_driver()
+newprograms().reverse_only_wordsofthe_string()
